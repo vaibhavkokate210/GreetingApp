@@ -39,4 +39,9 @@ public class GreetingController {
 	public Greeting greeting(@PathVariable long id) {	 
 		return greetingService.findGreeting(id);
 	}
+	
+	@RequestMapping(value = {"/getall"},method = RequestMethod.GET)
+	public String allMessages() {	 
+		return greetingService.allMessage();
+	}
 }
